@@ -33,7 +33,10 @@
     }
 }
 
-button[data-tooltip]{
+/* tooltip style */
+
+button[data-tooltip],
+button[data-add]{
     position: relative;
 }
 button[data-tooltip]::before{
@@ -47,11 +50,26 @@ button[data-tooltip]::before{
     display: none;
     transition: 300ms ease-out;
 }
-button[data-tooltip]:hover::before{
+button[data-add]::before{
+    position:absolute;
+    content: attr(data-add);
+    bottom: -.25rem;
+    left: 50%;
+    width: 200px;
+    padding: .5rem .8rem;
+    color: rgb(26, 24, 24);
+    transform: translateX(-50%) translateY(100%);
+    display: none;
+    transition: 300ms ease-out;
+}
+button[data-tooltip]:hover::before,
+button[data-add]:hover::before{
     animation-name: fade-in;
     animation-duration: 1s;
     display: block;
 }
+
+
 @keyframes fade-in {
     from {
       opacity: 0;

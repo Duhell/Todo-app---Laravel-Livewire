@@ -1,4 +1,4 @@
-<div class="w-full lg:mt-28 lg:px-16 lg:py-4 mt-24 px-6 py-2 ">
+<div class="w-full lg:mt-28 lg:px-16 mt-24 px-6 py-2 ">
     <p class="font-medium">Remaining {{ $total ? "Tasks" : "Task" }} : {{ $total }}</p>
 
         @if ($tasks->isEmpty())
