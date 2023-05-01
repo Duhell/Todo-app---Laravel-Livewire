@@ -7,6 +7,7 @@
     <title>Todo App</title>
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     <script src="{{ asset('modal.js') }}"></script>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
