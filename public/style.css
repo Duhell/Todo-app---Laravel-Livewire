@@ -32,3 +32,31 @@
       transform: translateX(-10%);
     }
 }
+
+button[data-tooltip]{
+    position: relative;
+}
+button[data-tooltip]::before{
+    position:absolute;
+    content: attr(data-tooltip);
+    bottom: -.25rem;
+    left: -20%;
+    padding: .5rem .8rem;
+    color: rgb(204, 198, 198);
+    transform: translateX(-100%);
+    display: none;
+    transition: 300ms ease-out;
+}
+button[data-tooltip]:hover::before{
+    animation-name: fade-in;
+    animation-duration: 1s;
+    display: block;
+}
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
